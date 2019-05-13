@@ -147,9 +147,9 @@ describe('PropTypesDevelopmentStandalone', () => {
         null,
       );
       expect(console.error.calls.argsFor(0)[0]).toEqual(
-        'Warning: Missing `prop-types`: testComponent: prop type `bar` is missing validate in `prop-types`.' +
-        ' Please add type in `prop-types` or remove prop' + ' `bar`' +
-        ' from outer props if not used for performance reason.'
+        'Warning: Missing `prop-types`: testComponent: prop type `bar` is missing validation in `.prop-types`.' +
+        ' Please add a validator in `.prop-types` or remove prop' + ' `bar`' +
+        ' from outer props if not used.'
       );
     });
 
@@ -165,9 +165,9 @@ describe('PropTypesDevelopmentStandalone', () => {
         null,
       );
       expect(console.error.calls.argsFor(0)[0]).toEqual(
-        'Warning: Missing `prop-types`: testComponent: prop type `bar`, `zoo` is missing validate in `prop-types`.' +
-        ' Please add type in `prop-types` or remove prop' + ' `bar`, `zoo`' +
-        ' from outer props if not used for performance reason.'
+        'Warning: Missing `prop-types`: testComponent: prop type `bar`, `zoo` is missing validation in `.prop-types`.' +
+        ' Please add a validator in `.prop-types` or remove prop' + ' `bar`, `zoo`' +
+        ' from outer props if not used.'
       );
     })
 

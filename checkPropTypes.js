@@ -92,8 +92,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
       printWarning(
         'Missing `prop-types`: '+
         (componentName || 'React class') + ': ' + location + ' type `'+ missKeys +
-      '` is missing validate in `prop-types`. Please add type in `prop-types` or remove '
-      + location + ' `' + missKeys + '` from outer props if not used for performance reason.');
+      '` is missing validation in `.prop-types`. Please add a validator in `.prop-types` or remove '
+      + location + ' `' + missKeys + '` from outer props if not used.');
     }
   }
 }
@@ -105,7 +105,7 @@ function checkIfPropsMissKey(componentProps, propTypes) {
   if(diffKeys.length) {
     return diffKeys.join('`, `');
   }
-  return false;
+  return '';
 }
 
 /**
